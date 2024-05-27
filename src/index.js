@@ -39,7 +39,7 @@ class Board {
         }
         this.#gameOver = false;
         this.#status = "Let's Play!";
-        fetch('http://localhost:9876/')
+        fetch('http://192.168.0.216:9876/')
             .then(response => response.text())
             .then(text => {this.#status = text;this.draw();})
             .catch(error => {
